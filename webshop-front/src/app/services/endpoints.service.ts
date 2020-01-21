@@ -101,4 +101,8 @@ export class EndpointsService {
   getMyPapers(username): Observable<any>{
     return this.http.get(`${BASE_URL}/myPapers/${username}`);
   }
+
+  getAllPapers(): Observable<any>{
+    return this.http.get(`${BASE_URL}/papers`);
+  }
 }

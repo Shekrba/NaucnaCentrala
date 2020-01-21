@@ -342,4 +342,9 @@ public class WebShopController {
     public @ResponseBody List<CasopisDTO> getMyPapers(@PathVariable String username) {
         return userService.getMyPapers(username);
     }
+
+    @GetMapping(path = "/papers", produces = "application/json")
+    public @ResponseBody List<CasopisDTO> getAllPapers() {
+        return userService.getAllPapers();
+    }
 }

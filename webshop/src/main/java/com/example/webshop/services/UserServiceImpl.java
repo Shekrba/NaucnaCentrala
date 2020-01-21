@@ -97,4 +97,23 @@ public class UserServiceImpl implements  UserService {
 
         return ret;
     }
+
+    public List<CasopisDTO> getAllPapers(){
+        List<CasopisDTO> ret = new ArrayList<>();
+        List<Casopis> casopisList = casopisRepository.findAllActive();
+
+        for (Casopis casopis:casopisList) {
+            CasopisDTO dto = new CasopisDTO();
+            dto.setId(casopis.getId());
+            dto.setNaziv(casopis.getNaziv());
+            dto.setClanarina(casopis.getClanarina());
+            dto.setIssn(casopis.getIssn());
+            dto.setAktiviran(casopis.getAktiviran());
+            dto.setKomeSeNaplacuje(casopis.getKomeSeNaplacuje());
+
+            ret.add(dto);
+        }
+
+        return ret;
+    }
 }

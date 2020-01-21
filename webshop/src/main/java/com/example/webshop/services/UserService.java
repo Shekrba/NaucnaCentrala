@@ -10,4 +10,5 @@ public interface UserService {
     public UredniciRecenzentiDTO getUrednikRecenzent(Long casopisId, String username);
     public CorrectionDTO getCorrectionData(Long casopisId);
     public List<CasopisDTO> getMyPapers(String username);
+    public List<CasopisDTO> getAllPapers();
 }

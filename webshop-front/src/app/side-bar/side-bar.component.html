@@ -32,6 +32,12 @@
               <span>Početna strana</span>
             </a>
           </li>
+          <li>
+            <a routerLink="/papers">
+              <i class="fas fa-book-open"></i>
+              <span>Časopisi</span>
+            </a>
+          </li>
         </ul>
       </div>
       <ng-container *ngIf="currentUser$ | async as user">

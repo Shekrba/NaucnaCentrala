@@ -17,6 +17,7 @@ import { NewPaperComponent } from './components/new-paper/new-paper.component';
 import { NotifierModule, NotifierOptions } from "angular-notifier";
 import { UrednikRecenzentComponent } from './components/urednik-recenzent/urednik-recenzent.component';
 import { MyPapersComponent } from './components/my-papers/my-papers.component';
+import { AllPapersComponent } from './components/all-papers/all-papers.component';
 
 const customNotifierOptions: NotifierOptions = {
   position: {
@@ -72,6 +73,7 @@ const customNotifierOptions: NotifierOptions = {
     NewPaperComponent,
     UrednikRecenzentComponent,
     MyPapersComponent,
+    AllPapersComponent,
   ],
   imports: [
     BrowserModule,

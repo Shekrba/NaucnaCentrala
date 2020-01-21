@@ -10,6 +10,7 @@ import { NewPaperComponent } from './components/new-paper/new-paper.component';
 import { UrednikRecenzentComponent } from './components/urednik-recenzent/urednik-recenzent.component';
 import { MyPapersComponent } from './components/my-papers/my-papers.component';
 import { AuthGuard } from './_guards';
+import { AllPapersComponent } from './components/all-papers/all-papers.component';
 
 const routes: Routes = [
   { path : "", component : HomeComponent },
@@ -21,7 +22,8 @@ const routes: Routes = [
   { path : "newPaper", component : NewPaperComponent, canActivate:[AuthGuard] },
   { path : "correction/:processId", component : NewPaperComponent, canActivate:[AuthGuard] },
   { path : "newPaper/:processId", component : UrednikRecenzentComponent, canActivate:[AuthGuard] },
-  { path : "myPapers", component : MyPapersComponent, canActivate:[AuthGuard] }
+  { path : "myPapers", component : MyPapersComponent, canActivate:[AuthGuard] },
+  { path : "papers", component : AllPapersComponent}
 ];
 
 @NgModule({
